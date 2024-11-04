@@ -9,42 +9,90 @@
   <body>
     <div class="topnav">
       <a style="font-family: Coiny; color: var(--dark)" href="#"
-        ><img style="width: 20px" src="img/PnT_logo.png" alt="" />PnT</a
+        ><img style="width: 20px" src="PnT_logo.png" alt="" />PnT</a
       >
-      <a href="#services">Our Services</a>
-      <a href="#partners">Partners</a>
-      <a href="#contact">Contact</a>
-      <a href="#" style="float: right">Register</a>
-      <a href="#" style="float: right">Log in</a>
+      <a style="float: right" href="#contact">Contact</a>
+      <a style="float: right" href="#partners">Partners</a>
+      <a style="float: right" href="#services">Our Services</a>
     </div>
+    <div class="parallax">
+      <div class="art">
+        <img
+          style="width: 50%; float: right"
+          src="java-sparrow_hero.png"
+          alt="java sparrow illustration"
+        />
+      </div>
+      <div id="header" class="header">
+        <div style="width: 50%" class="hero-txt">
+          <h1>Puffy 'n' Toffee</h1>
+          <h3>Birdcare Services</h3>
+          <p>
+            Are you a bird parent, a bird enthusiast or simply like wasting time
+            on the internet searching for bird fun facts just for fun? If you
+            ask us, we think it’s not wasted but rather quality time. If your
+            answer is yes, good news: you have just flown into the right nest.
+            We are service providers when it comes to birdsitting, digestable
+            encyclopedia about pet birds and other birdy stuff. If your answer
+            is no, well, also good news, you’ll become one of us kind weirdos
+            real’ soon.
+          </p>
+        </div>
+        <button class="open-button btn-primary" onclick="openForm()">
+          Log in
+        </button>
 
-    <div class="header">
-      <img id="bird" src="PnT_hero.png" alt="bird illustration" />
-      <h1>Puffy 'n' Toffee</h1>
-      <h3>Birdcare Services</h3>
-      <p>
-        Are you a bird parent, a bird enthusiast or simply like wasting time on
-        the internet searching for bird fun facts just for fun? If you ask us,
-        we think it’s not wasted but rather quality time. If your answer is yes,
-        good news: you have just flown into the right nest. We are service
-        providers when it comes to birdsitting, digestable encyclopedia about
-        pet birds and other birdy stuff. If your answer is no, well, also good
-        news, you’ll become one of us kind weirdos real’ soon.
-      </p>
-      <a href="#services"
-        ><button class="btn-primary">Let's get started!</button></a
-      >
+        <div class="form-popup" id="myForm">
+          <form action="/action_page.php" class="form-container">
+            <h2>Login</h2>
+
+            <label for="email"><b>Email</b></label>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              required
+            />
+
+            <label for="psw"><b>Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              required
+            />
+
+            <button type="submit" class="btn btn-primary">Login</button>
+            <button
+              type="button"
+              class="btn cancel btn-primary"
+              onclick="closeForm()"
+            >
+              Close
+            </button>
+          </form>
+        </div>
+      </div>
+      <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+      </script>
     </div>
 
     <div class="row">
       <div class="leftcolumn">
-        <div style="text-align: center" class="card">
+        <div id="services" style="text-align: center" class="card">
           <h1>You're in the good flock!</h1>
           <h3 style="font-weight: lighter; font-style: italic">
             “Love and care for pet birds like never before.”
           </h3>
         </div>
-        <div id="services" class="card">
+        <div class="card">
           <h2>BIRDIEPEDIA</h2>
           <h3>Fun fact factory for newbies</h3>
           <p>
@@ -140,7 +188,7 @@
           </p>
         </div>
         <div id="partners" class="card">
-          <h3>Partners</h3>
+          <h2>Partners</h2>
           <p>
             We’ve been joining forces with these guys, apparently they’re
             trustworthy, quality brands.
@@ -151,6 +199,19 @@
               <li>The Flock</li>
               <li>Fly-hi</li>
             </ul>
+          </div>
+          <h2>
+            My Ideal Design <br />
+            on Figma
+          </h2>
+          <p>Note: If you're curious, please request for access.</p>
+          <div class="ideal-design">
+            <iframe
+              style="border: 1px solid rgba(0, 0, 0, 0.1)"
+              width="100%"
+              src="https://embed.figma.com/design/81lVyaEg6Q3I0njfJxgirx/Web-App-Class---PnT-Website?node-id=0-1&embed-host=share"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </div>
@@ -217,7 +278,15 @@
       <a style="font-family: Coiny" href="#"
         ><img style="width: 20px" src="PnT_logo.png" alt="" />PnT</a
       >
-      <p>© All rights reserved, Created by Hani, 2024</p>
+      <p>
+        © All rights reserved, Created by
+        <a
+          style="text-decoration: underline"
+          target="_blank"
+          href="https://www.hanivialand.hu"
+          >Hani</a
+        >, 2024
+      </p>
     </div>
     <script>
       function displayMessage() {
